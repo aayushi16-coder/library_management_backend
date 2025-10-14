@@ -14,4 +14,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     
     // Find books with low available copies
     List<Book> findByAvailableCopiesLessThanEqual(Integer availableCopies);
+
+    Book findByBookTitleIgnoreCase(String bookTitle);
 }
